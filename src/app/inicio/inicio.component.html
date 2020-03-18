@@ -1,0 +1,32 @@
+<div id="container" >
+    <div id="areas">
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" >Name</th>
+            <th scope="col">Departament</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <ng-container *ngFor="let item of areas">
+          <tr>
+            <td><button  (click) = "onClickMe(item)" class="btn btn-outline-info">{{item.name}}</button></td>
+            <td>{{item.departament}}</td>
+          </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+    <div id="details">
+      <ul class="list-group">
+        <li class="list-group-item active">DETALLES</li>
+        <li class="list-group-item">{{details.town}} </li>
+        <li class="list-group-item">{{details.boss}} </li>
+        <li class="list-group-item">{{details.age}} </li>
+        <li class="list-group-item">{{details.last_degree}} </li>
+      </ul>  
+    </div>
+</div>
